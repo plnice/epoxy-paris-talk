@@ -12,7 +12,7 @@ class MainActivityController : TypedEpoxyController<List<ListItem>>() {
 
     override fun buildModels(data: List<ListItem>) {
         data.forEach {
-            listItemViewHolder {
+            listItemCustomView {
                 id(it.id)
                 title(it.title)
                 subtitle(it.subtitle)
