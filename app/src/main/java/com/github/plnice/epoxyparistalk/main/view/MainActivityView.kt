@@ -1,5 +1,7 @@
 package com.github.plnice.epoxyparistalk.main.view
 
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import com.github.plnice.epoxyparistalk.R
 import com.github.plnice.epoxyparistalk.main.MainActivity
 import com.github.plnice.epoxyparistalk.main.MainActivityMvp
@@ -24,11 +26,11 @@ class MainActivityView
     }
 
     override fun showToast(message: String) {
-        TODO()
+        Toast.makeText(activity, message, LENGTH_SHORT).show()
     }
 
     override fun listItemClicks(): Flowable<Int> {
-        return Flowable.empty() // TODO
+        return controller.listItemClicks()
     }
 
 }
