@@ -51,6 +51,11 @@ dependencies {
     implementation 'com.airbnb.android:epoxy:2.14.0'
     kapt 'com.airbnb.android:epoxy-processor:2.14.0'
 
+    // Paris
+    implementation "com.airbnb.android:paris:1.1.0-SNAPSHOT"
+    implementation "com.airbnb.android:paris-annotations:1.1.0-SNAPSHOT"
+    kapt "com.airbnb.android:paris-processor:1.1.0-SNAPSHOT"
+
     // Tests
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-core:2.19.1"
