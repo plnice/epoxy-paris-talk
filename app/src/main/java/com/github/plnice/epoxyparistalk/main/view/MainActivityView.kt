@@ -20,7 +20,7 @@ class MainActivityView
     }
 
     override fun setListItems(items: List<ListItem>) {
-        TODO()
+        controller.setData(items)
     }
 
     override fun showToast(message: String) {
