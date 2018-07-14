@@ -13,16 +13,16 @@ import javax.inject.Inject
 class MainActivityView
 @Inject constructor(private val activity: MainActivity) : MainActivityMvp.View {
 
-    private lateinit var controller: MainActivityController
+//    private lateinit var controller: MainActivityController
 
     override fun onCreate() = with(activity) {
         setContentView(R.layout.activity_main)
-        controller = MainActivityController()
-        recycler_view.setController(controller)
+//        controller = MainActivityController()
+//        recycler_view.setController(controller)
     }
 
     override fun setListItems(items: List<ListItem>) {
-        controller.setData(items)
+//        controller.setData(items)
     }
 
     override fun showToast(message: String) {
@@ -30,7 +30,8 @@ class MainActivityView
     }
 
     override fun listItemClicks(): Flowable<Int> {
-        return controller.listItemClicks()
+        return Flowable.empty()
+//        return controller.listItemClicks()
     }
 
 }

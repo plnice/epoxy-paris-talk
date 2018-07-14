@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.airbnb.epoxy.EpoxyRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.github.plnice.epoxyparistalk.main.view.ListItemParisCustomView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recycler_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
+    style="@style/ListItemParisCustomView"
+    app:title="Item"
+    app:subtitle="Some subtitle"
     tools:context=".main.MainActivity" />
