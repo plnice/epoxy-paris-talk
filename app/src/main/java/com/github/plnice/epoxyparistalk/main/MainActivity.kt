@@ -2,12 +2,30 @@ package com.github.plnice.epoxyparistalk.main
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.github.plnice.epoxyparistalk.R
+import dagger.android.AndroidInjection
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var view: MainActivityMvp.View
+
+    @Inject
+    lateinit var presenter: MainActivityMvp.Presenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        AndroidInjection.inject(this)
+        view.onCreate()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        presenter.start()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        presenter.stop()
     }
 }
