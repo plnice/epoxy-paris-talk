@@ -5,13 +5,18 @@ import com.github.plnice.epoxyparistalk.main.MainActivity
 import com.github.plnice.epoxyparistalk.main.MainActivityMvp
 import com.github.plnice.epoxyparistalk.main.MainActivityMvp.ListItem
 import io.reactivex.Flowable
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivityView
 @Inject constructor(private val activity: MainActivity) : MainActivityMvp.View {
 
+    private lateinit var controller: MainActivityController
+
     override fun onCreate() = with(activity) {
         setContentView(R.layout.activity_main)
+        controller = MainActivityController()
+        recycler_view.setController(controller)
     }
 
     override fun setListItems(items: List<ListItem>) {
