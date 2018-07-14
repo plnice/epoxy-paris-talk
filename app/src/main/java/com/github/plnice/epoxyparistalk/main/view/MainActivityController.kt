@@ -11,12 +11,13 @@ class MainActivityController : TypedEpoxyController<List<ListItem>>() {
     private val clicksSubject: PublishSubject<Int> = PublishSubject.create()
 
     override fun buildModels(data: List<ListItem>) {
-        data.forEach {
+        data.forEachIndexed { index, item ->
             listItemParisCustomView {
-                id(it.id)
-                title(it.title)
-                subtitle(it.subtitle)
-                clickListener { _ -> clicksSubject.onNext(it.id) }
+                id(item.id)
+                title(item.title)
+                subtitle(item.subtitle)
+                clickListener { _ -> clicksSubject.onNext(item.id) }
+                if (index % 2 == 0) withDarkGreyStyle() else withGreyStyle()
             }
         }
     }

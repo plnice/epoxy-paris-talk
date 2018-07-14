@@ -20,8 +20,16 @@ class ListItemParisCustomView @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     companion object {
+
         @Style
         val DEFAULT_STYLE = R.style.ListItemParisCustomView
+
+        @Style
+        val GREY_STYLE = R.style.ListItemParisCustomView_Grey
+
+        @Style
+        val DARK_GREY_STYLE = R.style.ListItemParisCustomView_DarkGrey
+
     }
 
     init {

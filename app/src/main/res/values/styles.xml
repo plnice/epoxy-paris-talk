@@ -13,7 +13,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ListItemParisCustomView.Grey" parent="ListItemParisCustomView">
+        <item name="android:background">#C0C0C0</item>
+    </style>
+
+    <style name="ListItemParisCustomView.DarkGrey" parent="ListItemParisCustomView">
+        <item name="android:background">#909090</item>
     </style>
 
 </resources>
