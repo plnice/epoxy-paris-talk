@@ -25,4 +25,12 @@
         <item name="android:background">#909090</item>
     </style>
 
+    <style name="RedFont">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
+    <style name="GreenFont">
+        <item name="android:textColor">#00FF00</item>
+    </style>
+
 </resources>

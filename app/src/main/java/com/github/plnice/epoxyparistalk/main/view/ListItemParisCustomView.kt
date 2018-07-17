@@ -4,15 +4,16 @@ import android.content.Context
 import android.support.constraint.ConstraintLayout
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.TextView
 import com.airbnb.epoxy.CallbackProp
 import com.airbnb.epoxy.ModelView
 import com.airbnb.epoxy.TextProp
 import com.airbnb.paris.annotations.Attr
 import com.airbnb.paris.annotations.Style
 import com.airbnb.paris.annotations.Styleable
+import com.airbnb.paris.annotations.StyleableChild
 import com.github.plnice.epoxyparistalk.Paris
 import com.github.plnice.epoxyparistalk.R
-import kotlinx.android.synthetic.main.list_item_custom_view.view.*
 
 @Styleable("ListItemParisCustomView")
 @ModelView
@@ -33,8 +34,16 @@ class ListItemParisCustomView @JvmOverloads constructor(
 
     }
 
+    @StyleableChild(R.styleable.ListItemParisCustomView_titleStyle)
+    val title: TextView
+
+    @StyleableChild(R.styleable.ListItemParisCustomView_subtitleStyle)
+    val subtitle: TextView
+
     init {
         LayoutInflater.from(context).inflate(R.layout.list_item_custom_view, this, true)
+        title = findViewById(R.id.title)
+        subtitle = findViewById(R.id.subtitle)
         Paris.style(this).apply(attrs)
     }
 

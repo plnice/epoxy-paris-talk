@@ -4,4 +4,6 @@
     style="@style/ListItemParisCustomView"
     app:title="Item"
     app:subtitle="Some subtitle"
+    app:titleStyle="@style/RedFont"
+    app:subtitleStyle="@style/GreenFont"
     tools:context=".main.MainActivity" />
